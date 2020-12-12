@@ -162,7 +162,7 @@ STOP_ITERS = 10000000 # Stop after this many iterations
 # TODO:
 PRINT_TIME = 120*60 # Print cost, generate samples, save model checkpoint every N seconds.
 STOP_TIME = 60*60*24*30 # Stop after this many seconds of actual training (not including time req'd to generate samples etc.)
-N_SEQS = 30 # Number of samples to generate every time monitoring.
+N_SEQS = 5 # Number of samples to generate every time monitoring.
 # TODO:
 RESULTS_DIR = 'results_2t'
 FOLDER_PREFIX = os.path.join(RESULTS_DIR, tag)
@@ -516,6 +516,7 @@ def generate_and_save_samples(tag):
     print log,
 
     for i in xrange(N_SEQS):
+        print "generating sample", i
         samp = samples[i]
         if Q_TYPE == 'mu-law':
             from datasets.dataset import mu2linear
