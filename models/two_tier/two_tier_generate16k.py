@@ -179,10 +179,10 @@ TRAIN_MODE = 'time' # To use PRINT_TIME and STOP_TIME
 #TRAIN_MODE = 'iters-time'
 # To use PRINT_ITERS for validation,
 # and (STOP_ITERS, STOP_TIME), whichever happened first, for stopping exp.
-PRINT_ITERS = 10000 # Print cost, generate samples, save model checkpoint every N iterations.
+PRINT_ITERS = 1000 # Print cost, generate samples, save model checkpoint every N iterations.
 STOP_ITERS = 100000 # Stop after this many iterations
 # TODO:
-PRINT_TIME = 90*60 # Print cost, generate samples, save model checkpoint every N seconds.
+PRINT_TIME = 10*60 # Print cost, generate samples, save model checkpoint every N seconds.
 STOP_TIME = 60*60*24*3 # Stop after this many seconds of actual training (not including time req'd to generate samples etc.)
 # TODO:
 RESULTS_DIR = 'results_2t'
