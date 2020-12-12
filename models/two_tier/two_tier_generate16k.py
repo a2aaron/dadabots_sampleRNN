@@ -502,7 +502,7 @@ def generate_and_save_samples(tag, N_SECS=5):
 
     total_time = time()
     # Generate N_SEQS' sample files, each 5 seconds long
-    LENGTH = N_SECS*BITRATE if not args.debug else 100
+    LENGTH = N_SECS*BITRATE # if not args.debug else 100
 
     samples = numpy.zeros((N_SEQS, LENGTH), dtype='int32')
     samples[:, :FRAME_SIZE] = Q_ZERO
